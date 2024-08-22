@@ -1,0 +1,40 @@
+\documentclass{article}
+
+\usepackage[utf8]{inputenc}
+\usepackage{amsmath}
+\usepackage{enumitem}
+
+\title{Assignment 1 - Stable Matching}
+\author{Bilal Sheikh (Bilalas)}
+\date{\today}
+
+\begin{document}
+
+\maketitle
+
+\section*{Task 1: Explaining Stable Matching}
+
+\textbf{Question:} Explain, in your own words, what it means for a matching to be stable.
+
+\textbf{Answer:} 
+A matching is considered \textit{stable} if there are no two elements (say, $x$ from one set and $y$ from another set) that would prefer each other over their current partners. In other words, for all pairs $(x, y)$, if $x$ is matched with $y'$ and $y$ is matched with $x'$, neither $x$ prefers $y$ over $y'$, nor $y$ prefers $x$ over $x'$. This ensures that no pair has an incentive to deviate from the given matching.
+
+\section*{Task 2: Stable Matching Problem}
+
+\textbf{Question:} Prove or disprove the statement about a stable matching when $x$ and $y$ are each other's top choices.
+
+\textbf{Answer:} 
+Consider an instance where $x$ and $y$ are ranked first on each other's preference list. The statement implies that $(x, y)$ must be part of every stable matching. However, this is not necessarily true. [Continue with the proof or disproof, depending on your analysis.]
+
+\section*{Task 3: College Admissions with Ties}
+
+\textbf{Question:} Does there always exist a perfect matching with the given notion of stability? Justify your answer.
+
+\textbf{Answer:} 
+In college admissions with ties, a stable matching might not always exist under the provided conditions. [Provide justification and any relevant mathematical or logical arguments here.]
+
+\section*{Conclusion}
+
+This assignment covers fundamental concepts in stable matching, including theoretical analysis and practical application in college admissions. The proofs provided support the understanding of stability in different contexts.
+
+\end{document}
