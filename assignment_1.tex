@@ -17,24 +17,23 @@
 \textbf{Question:} Explain, in your own words, what it means for a matching to be stable.
 
 \textbf{Answer:} 
-A matching is considered \textit{stable} if there are no two elements (say, $x$ from one set and $y$ from another set) that would prefer each other over their current partners. In other words, for all pairs $(x, y)$, if $x$ is matched with $y'$ and $y$ is matched with $x'$, neither $x$ prefers $y$ over $y'$, nor $y$ prefers $x$ over $x'$. This ensures that no pair has an incentive to deviate from the given matching.
-
+A matching is considered \textit{stable} if there are no two elements (say, $x$ from one set and $y$ from another set) that would prefer each other over their current partners. 
 \section*{Task 2: Stable Matching Problem}
 
 \textbf{Question:} Prove or disprove the statement about a stable matching when $x$ and $y$ are each other's top choices.
 
 \textbf{Answer:} 
-Consider an instance where $x$ and $y$ are ranked first on each other's preference list. The statement implies that $(x, y)$ must be part of every stable matching. However, this is not necessarily true. [Continue with the proof or disproof, depending on your analysis.]
-
+Consider an instance where $x$ and $y$ are ranked first on each other's preference list. The statement implies that $(x, y)$ must be part of every stable matching. 
+\newline Let's assume that there exists a stable matching set $S'$ in which $x$ is paired with $y'$, and $y$ is paired with $x'$ such that $(x, y')$ and $(y, x')$ are both in $S'$.
+But now, since $x$ prefers $y$ to it's current partner $y'$ and $y$ prefers $x$ to it's current partner $x'$, then they form a \textit{blocking pair}. 
+But if the set $S'$ is a stable matching set, then it can not contain any blocking pairs. Thus, such a set $S'$ can not exist, and $(x,y)$ must therefore be an element of any stable matching set $S$.
+This proves that if $x$ and $y$ are each other's top choices, they must be part of every stable matching. 
 \section*{Task 3: College Admissions with Ties}
 
 \textbf{Question:} Does there always exist a perfect matching with the given notion of stability? Justify your answer.
 
 \textbf{Answer:} 
-In college admissions with ties, a stable matching might not always exist under the provided conditions. [Provide justification and any relevant mathematical or logical arguments here.]
-
-\section*{Conclusion}
-
-This assignment covers fundamental concepts in stable matching, including theoretical analysis and practical application in college admissions. The proofs provided support the understanding of stability in different contexts.
+In college admissions with ties, a stable matching might not always exist under the provided conditions. 
+For instance, in a scenario with two students and two colleges where both students and colleges have indifference in their preferences, any potential matching can become unstable due to the possibility of cycles. For example, if student \(S_1\) is matched with college \(C_1\) and \(S_2\) with \(C_2\), the mutual indifference allows for a switch that both students and colleges might find equally preferable, leading to instability. This indifference creates a situation where no matching can satisfy the stability criteria, as any matching can be disrupted by another equally desirable pairing, illustrating that a stable matching cannot always be guaranteed in the presence of ties.
 
 \end{document}
